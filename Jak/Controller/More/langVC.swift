@@ -16,15 +16,78 @@ class langVC: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    
+    
+    @IBAction func ar(_ sender: Any) {
+                if Language.currentLanguage() == "en-US" {
+                    Language.setAppLanguage(lang: "ar")
+                    UIView.appearance().semanticContentAttribute = .forceRightToLeft
+                }
+        
+        
+                let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+                let sb = UIStoryboard(name: "Main", bundle: nil)
+                if let api_token = helper.getAPIToken(){
+                    print(api_token)
+                    //            let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "swrer")
+                    //            window?.rootViewController = tab
+                    window?.rootViewController = sb.instantiateViewController(withIdentifier: "main")
+                    UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        
+                }else{
+                    window?.rootViewController = sb.instantiateViewController(withIdentifier: "login")
+                    UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+                }
     }
-    */
+    
+    @IBAction func en(_ sender: Any) {
+        if Language.currentLanguage() == "ar" {
+            Language.setAppLanguage(lang: "en-US")
+            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+        }
 
+
+        let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        if let api_token = helper.getAPIToken(){
+            print(api_token)
+            //            let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "swrer")
+            //            window?.rootViewController = tab
+            window?.rootViewController = sb.instantiateViewController(withIdentifier: "main")
+            UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+
+        }else{
+            window?.rootViewController = sb.instantiateViewController(withIdentifier: "login")
+            UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+        }
+
+    }
+
+    
+
+        
+//        if Language.currentLanguage() == "ar" {
+//            Language.setAppLanguage(lang: "en-US")
+//            UIView.appearance().semanticContentAttribute = .forceLeftToRight
+//        }else{
+//            Language.setAppLanguage(lang: "ar")
+//            UIView.appearance().semanticContentAttribute = .forceRightToLeft
+//        }
+        
+        
+//        let window = (UIApplication.shared.delegate as? AppDelegate)?.window
+//        let sb = UIStoryboard(name: "Main", bundle: nil)
+//        if let api_token = helper.getAPIToken(){
+//            print(api_token)
+//            //            let tab = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "swrer")
+//            //            window?.rootViewController = tab
+//            window?.rootViewController = sb.instantiateViewController(withIdentifier: "main")
+//            UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+//
+//        }else{
+//            window?.rootViewController = sb.instantiateViewController(withIdentifier: "login")
+//            UIView.transition(with: window!, duration: 0.5, options: .transitionFlipFromLeft, animations: nil, completion: nil)
+//        }
+    
 }

@@ -11,6 +11,9 @@
 "Delete" = "حذف";
 
 /* hhhh */
+"Email" = "الاميل";
+
+/* hhhh */
 "email not correct" = "الاميل ليس صحيح";
 
 /* profuct list lang */
@@ -44,6 +47,9 @@
 "Filed to request order" = "فشل في طلب";
 
 /* hhhh */
+"Full Name" = "الاسم";
+
+/* hhhh */
 "order Filed" = "فشل الطلب";
 
 /* hhhh */
@@ -57,6 +63,9 @@
 
 /* profuct list lang */
 "order status:" = "حالة الطالب:";
+
+/* hhhh */
+"Phone" = "الهاتف";
 
 /* hhhh */
 "please login frist" = "من فضلك سجل اولا";

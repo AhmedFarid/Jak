@@ -12,19 +12,29 @@ class moreVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        customBackBtton()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func customBackBtton() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
-    */
-
+    
+    @IBAction func myorder(_ sender: Any) {
+        guard (helper.getAPIToken() != nil)  else {
+            let message = NSLocalizedString("please login frist", comment: "hhhh")
+            let title = NSLocalizedString("Filed to request order", comment: "profuct list lang")
+            self.showAlert(title: title, message: message)
+            return
+        }
+        
+        performSegue(withIdentifier: "suge123", sender: nil)
+    }
+    
+    @IBAction func logoutBTN(_ sender: Any) {
+        helper.dleteAPIToken()
+    }
+    
 }

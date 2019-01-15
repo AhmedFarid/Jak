@@ -1,0 +1,6 @@
+framework module Pods_Jak {
+  umbrella header "Pods-Jak-umbrella.h"
+
+  export *
+  module * { export * }
+}

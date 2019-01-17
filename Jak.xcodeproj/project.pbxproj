@@ -657,7 +657,8 @@
 			baseConfigurationReference = C1111FEB7B27808C4340E040 /* Pods-Jak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
 				INFOPLIST_FILE = Jak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -666,8 +667,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.E-Bakers.Jak";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JakGo;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -676,7 +678,8 @@
 			baseConfigurationReference = AD0D61A0C40E7CD0F5E3AFF6 /* Pods-Jak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 4Z34DQ34UQ;
 				INFOPLIST_FILE = Jak/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -685,8 +688,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.E-Bakers.Jak";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = JakGo;
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

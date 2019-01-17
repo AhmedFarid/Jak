@@ -65,7 +65,7 @@ class langVC: UIViewController {
     }
 
     
-
+	
         
 //        if Language.currentLanguage() == "ar" {
 //            Language.setAppLanguage(lang: "en-US")
@@ -74,7 +74,7 @@ class langVC: UIViewController {
 //            Language.setAppLanguage(lang: "ar")
 //            UIView.appearance().semanticContentAttribute = .forceRightToLeft
 //        }
-        
+    
         
 //        let window = (UIApplication.shared.delegate as? AppDelegate)?.window
 //        let sb = UIStoryboard(name: "Main", bundle: nil)
